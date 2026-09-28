@@ -1,0 +1,18 @@
+name: scope1-emission-calculator
+version: 1.0.0
+description: "Calculates metric tons CO2e from natural gas and stationary fuel combustion"
+input_schema:
+  type: object
+  properties:
+    fuel_consumption_json:
+      type: string
+      description: "JSON string containing gallons_diesel or therms_natural_gas"
+  required:
+    - fuel_consumption_json
+implementation:
+  type: script
+  path: scope1_emission_calculator.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true

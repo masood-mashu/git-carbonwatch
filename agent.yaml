@@ -1,0 +1,40 @@
+spec_version: "0.1.0"
+name: git-carbonwatch
+version: 1.0.0
+description: "Autonomous Enterprise Scope 1/2/3 Carbon Accounting, ESG & GHG Protocol Verifier Agent"
+author: "masood-mashu"
+license: "Apache-2.0"
+
+model:
+  preferred: "openai:gpt-4o"
+  fallback:
+    - "anthropic:claude-3-5-sonnet"
+    - "openai:gpt-4o-mini"
+  constraints:
+    temperature: 0.1
+    max_tokens: 4096
+
+skills:
+  - ghg-protocol-scope12-calculation
+  - sbti-netzero-trajectory-auditing
+
+tools:
+  - scope1-emission-calculator
+  - scope2-grid-calculator
+  - sbti-trajectory-verifier
+
+runtime:
+  max_turns: 50
+  timeout: 120
+
+tags:
+  - other
+  - carbon-accounting
+  - esg
+  - ghg-protocol
+  - sustainability
+  - passport-challenge
+
+metadata:
+  passport_id: "aps-carbonwatch-01"
+  passport_category: "Other"

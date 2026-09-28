@@ -1,0 +1,18 @@
+name: scope2-grid-calculator
+version: 1.0.0
+description: "Calculates Scope 2 electricity indirect emissions based on kWh usage and grid factor"
+input_schema:
+  type: object
+  properties:
+    electricity_data_json:
+      type: string
+      description: "JSON string with kwh_consumed and grid_factor_kg_per_kwh"
+  required:
+    - electricity_data_json
+implementation:
+  type: script
+  path: scope2_grid_calculator.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true
