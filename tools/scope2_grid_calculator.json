@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "scope2_grid_calculator",
+  "description": "Calculates Scope 2 electricity indirect emissions based on kWh and grid factor",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "electricity_data_json": {
+        "type": "string",
+        "description": "JSON string with kwh_consumed and grid_factor"
+      }
+    },
+    "required": [
+      "electricity_data_json"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "scope1_emission_calculator",
+  "description": "Calculates metric tons CO2e from natural gas and stationary fuel combustion",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "fuel_consumption_json": {
+        "type": "string",
+        "description": "JSON string containing gallons_diesel or therms"
+      }
+    },
+    "required": [
+      "fuel_consumption_json"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}

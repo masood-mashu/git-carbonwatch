@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "sbti_trajectory_verifier",
+  "description": "Verifies whether annual emission reductions meet SBTi 1.5C minimum 4.2% rate",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "reduction_data_json": {
+        "type": "string",
+        "description": "JSON string with baseline and current year emissions"
+      }
+    },
+    "required": [
+      "reduction_data_json"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}
